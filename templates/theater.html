@@ -1,0 +1,32 @@
+{% include "header.html" %}
+{%load static%}
+
+<div class ="container">
+<div id="main">
+    <div id="content">
+      <div class="box">
+        <div class="head">
+          <h2>Movie In Theaters</h2>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+        {%for theater in theater %}
+        <div class="movie ">
+          <div class="movie-image"> <span class="play">{{theater.hallname}}<span  class="name">{{theater.name}}</span></span> <img  src="{{ theater.imgurl }}" alt="{{ movie.name }}"></a>
+          
+         
+        </div>
+        <a
+          name=""
+          id=""
+          class="btn btn-dark btn-justify-center"
+          href="{% url 'theater_details' theater_id=theater.id %}">Book Tickets Now <a/>
+        
+      </div>
+      
+      {% endfor %}
+      
+    </div>
+  </div>
+
+
+{% include "footer.html" %}

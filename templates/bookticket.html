@@ -1,0 +1,77 @@
+{% include "header.html" %}
+<div class="container">
+    <div class="card" >
+        <div class="card_title">
+          <h1>Ticket For</h1>
+          <h1>{{theater.name}}<h1>
+        </div>
+        <div class="form">
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+          <label for="">Ticket User</label>
+          <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="">
+    
+          <label for=""></label>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              Select Hall            </button>
+            <br>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+              <a class="dropdown-item" href="#">Eye Plex Mall</a>
+              <a class="dropdown-item " href="#">Qfx Nepal</a>
+              <a class="dropdown-item" href="#">Gopi Krishna Hall</h6>
+              <a class="dropdown-item" href="#">City Center </a>
+              <a class="dropdown-item" href="#">Civil Mall</a>
+            </div>
+          </div>
+          <br>
+        
+          <form>
+            <div class="form-group">
+              <label for="datepicker">Select Date:</label>
+              <div class="input-group date" id="datepicker" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#datepicker" placeholder="Select date">
+                <div class="input-group-append" data-target="#datepicker" data-toggle="datetimepicker">
+                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="time">Select Time:</label>
+            <select id="time" name="time">
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+      <!-- Add more time options as needed -->
+    </select>
+      
+          </form>
+          <br>
+          <label>Quantity </label>
+      
+          
+          <button type="submit">Checkout</button>
+    
+        </form>
+    
+          
+
+          
+       
+    
+      
+      </div>
+</div>
+
+</div>
+
+{% include "footer.html" %}

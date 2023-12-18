@@ -1,0 +1,51 @@
+{% include "header.html" %}
+{%load static%}
+
+<div class="container" style="justify-content:center;">
+  
+
+  <div class="card" >
+    <div class="card_title">
+      <h1>Upload Movies</h1>
+    </div>
+    <div class="form">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <label for="">Movie Name</label>
+      <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelpId" placeholder="">
+
+      <label for="">Description</label>
+      <input type="text" class="form-control" name="description" id=""description aria-describedby="emailHelpId" placeholder="">
+  
+      <label>Video Url</label>
+      <input type="url" class="form-control" name="url" id="url" aria-describedby="emailHelpId" placeholder="">
+  
+      <label>Image Url</label>
+      <input type='url' name='imgurl' class="form-control">
+  
+      <div class="mb-3">
+        <label for="" class="form-label">Choose file</label>
+        <input
+            type="file"
+            class="form-control"
+            name="video"
+            id=""
+            placeholder=""
+            aria-describedby="fileHelpId"
+        />
+      </div>
+      <button type="submit">Upload</button>
+
+    </form>
+
+      
+      
+    </div>
+
+  
+  </div>
+</div>
+
+
+
+{% include "footer.html" %}

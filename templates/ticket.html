@@ -1,0 +1,33 @@
+{% include "header.html" %}
+<div class="container">
+    <div class="card mb-8">
+      <div class="card_title">
+        <h1>Create Tickets</h1>
+      </div>
+      <div class="form">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" id="name" placeholder="Movie Name" />
+        <input type="text" name="description" placeholder="description" id="email" />
+        <input type="text" name="hallname" placeholder="hallname" id="password" />
+        <input type="url" name="imgurl" placeholder='imgurl' id="imgurl"/>
+        <input type="text" name="price" placeholder="price" id="price" />
+        <input type="text" name="location" placeholder="location" id="location" />
+
+        <button >Upload Ticket</button>
+        </form>
+      </div>
+      <div class="card_terms">
+          <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+      </div>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+  <style>
+    /* Add your custom styles here */
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+  
